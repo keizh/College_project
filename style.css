@@ -211,11 +211,97 @@ nav {
 
 /* second page */
 
-div.website-content {
+.website-content {
   position: absolute;
   top: 100vh;
   width: 100%;
-  height: 300vh;
-  background: #252525;
+  height: fit-content;
+  background: #fff7f1;
   padding: 6em 2em;
+  /* background: linear-gradient(135deg, #030637, #3c0753, #720455, #720455);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white; */
+}
+
+/* @keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.website-content > h1 {
+  font-family: "DELIRIUM NCV";
+  font-size: 8vw;
+  padding-inline: 10vw;
+  width: 50%;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.genresBox {
+  padding-inline: 10vw;
+  padding-block: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  gap: 25px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.row > img {
+  height: 25vw;
+  width: 15vw;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.row div h2 {
+  font-family: "Kapvile Demo";
+  font-size: 10vw;
+}
+
+.row > div {
+  width: 300px;
+  z-index: 10;
+}
+
+.animated-text {
+  background: linear-gradient(135deg, #ff5373, #ffc858, #17e7ff, #6d3bff);
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 20px;
+}
+
+.animated-text2 {
+  background: linear-gradient(135deg, #6d3bff, #17e7ff, #ffc858, #ff5373);
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 20px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
