@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pin: true,
     },
     y: -250,
-    scale: 0.2,
+    scale: 0.5,
     rotation: -15,
     ease: "power3.out",
     borderRadius: 100,
@@ -256,7 +256,7 @@ for (let i = 1; i <= 6; i++) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: `#img${i}`,
-      start: "top 120%",
+      start: "top 150%",
       end: "bottom -50%",
       scrub: true,
       markers: true,
@@ -284,7 +284,7 @@ for (let i = 1; i <= 6; i++) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: `#imgPara${i}`,
-      start: "top 120%",
+      start: "top 150%",
       end: "bottom -50%",
       scrub: true,
       markers: true,
