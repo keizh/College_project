@@ -238,7 +238,7 @@ nav {
 
 .website-content > h1 {
   font-family: "DELIRIUM NCV";
-  font-size: 5vw;
+  font-size: 10vw;
   padding-inline: 10vw;
   width: 50%;
   display: flex;
@@ -246,6 +246,13 @@ nav {
   justify-content: center;
   margin-bottom: 25px;
   color: white;
+}
+
+#extra {
+  width: 50%;
+  margin-inline: auto;
+  font-size: 20px;
+  font-family: "Times New Roman";
 }
 
 .genresBox {
@@ -265,8 +272,8 @@ nav {
 }
 
 .row > img {
-  height: 25vw;
-  width: 15vw;
+  height: 35vw;
+  width: 20vw;
   object-fit: cover;
   border-radius: 10px;
   z-index: 10;
@@ -280,6 +287,7 @@ nav {
 .row > div {
   width: 300px;
   z-index: 10;
+  color: white;
 }
 
 .animated-text {
@@ -304,4 +312,102 @@ nav {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* ----------------- */
+
+.page3 {
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  margin-bottom: 50vh;
+  background: #5546ff;
+}
+
+.animated-text3 {
+  background: linear-gradient(135deg, #ff5373, #ffc858, #17e7ff, #6d3bff);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* .page4 {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  z-index: 5;
+  background-color: red;
+}
+ */
+
+.page3 h1 {
+  padding-block: 2vw;
+  font-family: "DELIRIUM NCV";
+  font-size: 10vw;
+  color: white;
+
+  width: fit-content;
+  margin-inline: auto;
+  /* background-color: red; */
+}
+
+.imageBackgound {
+  display: flex;
+  padding-block: 2vw;
+  padding-inline: 15vw;
+  gap: 100px;
+}
+
+.image {
+  height: auto;
+  width: 30vw;
+}
+.image img {
+  border-radius: 10px;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  /* font-family: "Teko"; */
+  backdrop-filter: invert(10%);
+  border-radius: 30px;
+  padding: 1vw;
+  font-weight: 500;
+  width: 40%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.generatedStories {
+  display: flex;
+  margin-inline: 8vw;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+/* .generatedStories > div {
+  height: 100px;
+  width: auto;
+} */
+
+.generatedStories div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 50px;
+}
+
+.art1 {
+  font-size: 20px;
+}
+
+#img123 {
+  position: sticky;
+  top: 10%;
+  height: 200px;
+  width: auto;
 }
