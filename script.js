@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       end: () =>
         "+=" +
         (window.innerHeight +
-          document.querySelector(".website-content").offsetHeight * 0.275),
+          document.querySelector(".website-content").offsetHeight * 0.55),
       scrub: 1,
       pin: true,
     },
@@ -17,6 +17,63 @@ document.addEventListener("DOMContentLoaded", function () {
     borderRadius: 100,
     // opacity: 0,
   });
+  // image rotation animation
+  for (let i = 1; i <= 6; i++) {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: `#img${i}`,
+        start: "top 120%",
+        end: "bottom -50%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl.from(`#img${i}`, {
+      opacity: 0,
+      scale: 0.1,
+      x: -300,
+      rotate: 45,
+    });
+
+    tl.to(`#img${i}`, {
+      opacity: 0,
+      scale: 0.1,
+      rotate: -45,
+      x: -300,
+      y: -100,
+    });
+  }
+
+  // text rotation animation
+  for (let i = 1; i <= 6; i++) {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: `#imgPara${i}`,
+        start: "top 120%",
+        end: "bottom -50%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    // Add 'from' animation to the timeline
+    tl.from(`#imgPara${i}`, {
+      opacity: 0,
+      scale: 0.1,
+      x: 300,
+      rotate: -45,
+    });
+
+    // Add 'to' animation to the timeline
+    tl.to(`#imgPara${i}`, {
+      opacity: 0,
+      scale: 0.1,
+      rotate: 45,
+      x: 300,
+      y: -100,
+    });
+  }
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -250,64 +307,6 @@ const leaveEvent = (e) => {
 
 wrapper.addEventListener("mousemove", moveEvent);
 wrapper.addEventListener("mouseleave", leaveEvent);
-
-// image rotation animation
-for (let i = 1; i <= 6; i++) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: `#img${i}`,
-      start: "top 120%",
-      end: "bottom -50%",
-      scrub: true,
-      markers: true,
-    },
-  });
-
-  tl.from(`#img${i}`, {
-    opacity: 0,
-    scale: 0.1,
-    x: -300,
-    rotate: 45,
-  });
-
-  tl.to(`#img${i}`, {
-    opacity: 0,
-    scale: 0.1,
-    rotate: -45,
-    x: -300,
-    y: -100,
-  });
-}
-
-// text rotation animation
-for (let i = 1; i <= 6; i++) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: `#imgPara${i}`,
-      start: "top 120%",
-      end: "bottom -50%",
-      scrub: true,
-      markers: true,
-    },
-  });
-
-  // Add 'from' animation to the timeline
-  tl.from(`#imgPara${i}`, {
-    opacity: 0,
-    scale: 0.1,
-    x: 300,
-    rotate: -45,
-  });
-
-  // Add 'to' animation to the timeline
-  tl.to(`#imgPara${i}`, {
-    opacity: 0,
-    scale: 0.1,
-    rotate: 45,
-    x: 300,
-    y: -100,
-  });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   const colors = ["#FF5373", "#FFC858", "#17E7FF", "#6D3BFF"];

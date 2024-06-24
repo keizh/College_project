@@ -273,7 +273,7 @@ nav {
 
 .row > img {
   height: 35vw;
-  width: 20vw;
+  width: 25vw;
   object-fit: cover;
   border-radius: 10px;
   z-index: 10;
@@ -288,6 +288,9 @@ nav {
   width: 300px;
   z-index: 10;
   color: white;
+  padding: 20px;
+  backdrop-filter: invert(10%);
+  border-radius: 10px;
 }
 
 .animated-text {
